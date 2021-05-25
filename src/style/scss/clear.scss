@@ -1,0 +1,94 @@
+#app {
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    color: #000;
+    font-size: 16px;
+    //   font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    min-height: 100%;
+    font-weight: 300;
+    // overflow-x: hidden;
+    // overflow: hidden;
+}
+.disableScroll {
+    overflow: hidden;
+}
+body {
+    // background: linear-gradient(#545569, #282834);
+    // background: #252931;
+}
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+img {
+    max-width: 100%;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+    margin: 0;
+    padding: 0;
+    line-height: 1.1rem;
+    font-size: 0.9rem;
+    @media (min-width: 900px) {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+.subpage {
+    // display: flex;
+    // flex-direction: row;
+    // justify-content: center;
+    // align-items: center;
+    padding: 2rem 0rem;
+    @media (min-width: 900px) {
+        padding: 4rem;
+    }
+}
+
+.hoverText {
+    display: flex;
+    &__item {
+        transition: all 0.4s;
+    }
+    &__empty {
+        width: 0.7rem;
+    }
+    &:hover {
+        .hoverText__item {
+            &:nth-child(odd) {
+                transform: translateY(15%);
+            }
+            &:nth-child(even) {
+                transform: translateY(-15%);
+            }
+        }
+    }
+}
+.slide-leave-active,
+.slide-enter-active {
+    transition: 0.5s;
+}
+.slide-enter {
+    transform: translate(100%, 0);
+}
+.slide-leave-to {
+    transform: translate(-100%, 0);
+}
+.link {
+    padding-bottom: 2px;
+    border-bottom: 2px solid $red;
+}
